@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Guided Notes</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --bg-gray: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --border: #cbd5e1;
+      --correct: #16a34a;
+      --incorrect: #dc2626;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg-gray);
+      margin: 0;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f5f9;
+      padding: 10px 14px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      border: 1px solid #e2e8f0;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .nav-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .nav-link.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      pointer-events: none;
+    }
+    h1 {
+      margin-top: 0;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      color: #0f172a;
+    }
+    h2 {
+      color: var(--primary-dark);
+      margin-top: 28px;
+      font-size: 1.3rem;
+    }
+    .word-bank {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .word-bank h3 {
+      margin-top: 0;
+      color: #1e40af;
+      font-size: 1rem;
+    }
+    .word-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .word-item {
+      background: #ffffff;
+      border: 1px solid #93c5fd;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+    input[type="text"] {
+      border: none;
+      border-bottom: 2px solid var(--border);
+      background: #f1f5f9;
+      padding: 4px 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      width: 130px;
+      text-align: center;
+      border-radius: 4px 4px 0 0;
+      transition: all 0.2s;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-bottom-color: var(--primary);
+      background: #e0e7ff;
+    }
+    input.correct {
+      border-bottom-color: var(--correct) !important;
+      background-color: #dcfce7 !important;
+      color: #14532d !important;
+    }
+    input.incorrect {
+      border-bottom-color: var(--incorrect) !important;
+      background-color: #fee2e2 !important;
+      color: #7f1d1d !important;
+    }
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: var(--primary-dark); }
+    #score-display {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav-bar">
+    <a class="nav-link" href="page1_content.html">&larr; Page 1: Reading</a>
+    <span class="nav-link active">Page 2: Guided Notes</span>
+    <a class="nav-link" href="page3_reflection_sandbox.html">Page 3: Sandbox &rarr;</a>
+  </nav>
+
+  <h1>Guided Notes: CSS Fundamentals</h1>
+  <p>Fill in the blanks as you read through the material from Page 1. Click <strong>Check Answers</strong> at the bottom when you finish.</p>
+
+  <div class="word-bank">
+    <h3>Word Bank (Use each word once)</h3>
+    <div class="word-list">
+      <span class="word-item">CSS</span>
+      <span class="word-item">presentation</span>
+      <span class="word-item">screen</span>
+      <span class="word-item">element</span>
+      <span class="word-item">style</span>
+      <span class="word-item">page</span>
+      <span class="word-item">&lt;head&gt;</span>
+      <span class="word-item">pages</span>
+      <span class="word-item">practice</span>
+      <span class="word-item">.css</span>
+      <span class="word-item">website</span>
+      <span class="word-item">selector</span>
+      <span class="word-item">colon</span>
+      <span class="word-item">semicolon</span>
+      <span class="word-item">property</span>
+      <span class="word-item">Box</span>
+      <span class="word-item">content</span>
+      <span class="word-item">padding</span>
+      <span class="word-item">border</span>
+      <span class="word-item">margin</span>
+    </div>
+  </div>
+
+  <h2>Introduction to Cascading Style Sheets</h2>
+  <p>
+    Cascading Style Sheets, commonly known as <input type="text" data-ans="CSS">, are used to format and design the layout of web pages. While HTML structures the actual content of a page, CSS controls the visual <input type="text" data-ans="presentation"> such as colors, fonts, layouts, and spacing. When web designers want to make a site visually appealing and well-structured, CSS provides the tools to modify how HTML elements are rendered on a <input type="text" data-ans="screen">.
+  </p>
+
+  <h2>Standard 1: Three Ways to Apply CSS</h2>
+  <p>
+    An inline style is used to apply a unique style directly to a single HTML <input type="text" data-ans="element">. Designers write the CSS code inside the HTML tag using the <input type="text" data-ans="style"> attribute. Because inline styles only affect one specific element on a page, they are generally inefficient for styling an entire website, but they are useful for quick, single-element style adjustments.
+  </p>
+  <p>
+    An internal stylesheet is used to style a single web <input type="text" data-ans="page"> by placing CSS rules directly inside the HTML document. These style rules are placed within the <code>&lt;style&gt;</code> tags located in the <input type="text" data-ans="<head>"> section of the HTML file. While internal styles keep code organized for one individual page, they cannot easily share styling rules across multiple <input type="text" data-ans="pages"> on a site.
+  </p>
+  <p>
+    Using an external stylesheet is considered the best coding <input type="text" data-ans="practice"> for web development. In this method, all CSS rules are stored in a separate file with a <input type="text" data-ans=".css"> file extension. This external file is then connected to HTML pages using the <code>&lt;link&gt;</code> tag in the head section, allowing a designer to change the look of an entire <input type="text" data-ans="website"> by editing just one single file.
+  </p>
+
+  <h2>Standard 2: Essential CSS Syntax & Box Model</h2>
+  <p>
+    Every CSS style rule consists of two main parts: a selector and a declaration block. The <input type="text" data-ans="selector"> specifies which HTML element you want to style. Inside the curly braces, each declaration contains a property and a value separated by a <input type="text" data-ans="colon">. Every individual declaration must end with a <input type="text" data-ans="semicolon"> to separate it from the next rule. In <code>p { color: blue; }</code>, <code>color</code> is the <input type="text" data-ans="property">.
+  </p>
+  <p>
+    In CSS, every HTML element on a webpage is treated as a rectangular box. The CSS <input type="text" data-ans="Box"> Model describes how these layers are structured. At the core of the box model is the <input type="text" data-ans="content">, which holds the actual text or image. Directly surrounding the content is the <input type="text" data-ans="padding">, which creates transparent inner space. Wrapping around the padding is the <input type="text" data-ans="border">, which forms a frame around the element. Finally, the <input type="text" data-ans="margin"> creates transparent outer space beyond the border to push neighboring elements away.
+  </p>
+
+  <div class="actions">
+    <button onclick="checkAnswers()">Check Answers</button>
+    <div id="score-display"></div>
+  </div>
+
+  <nav class="nav-bar" style="margin-top: 32px; margin-bottom: 0;">
+    <a class="nav-link" href="page1_content.html">&larr; Back: Page 1 (Reading)</a>
+    <a class="nav-link" href="page3_reflection_sandbox.html">Next: Page 3 (Sandbox) &rarr;</a>
+  </nav>
+</div>
+
+<script>
+  function checkAnswers() {
+    const inputs = document.querySelectorAll('input[data-ans]');
+    let correctCount = 0;
+
+    inputs.forEach(input => {
+      const userAns = input.value.trim().toLowerCase();
+      const expected = input.getAttribute('data-ans').toLowerCase();
+
+      if (userAns === expected) {
+        input.className = 'correct';
+        correctCount++;
+      } else {
+        input.className = 'incorrect';
+      }
+    });
+
+    const scoreDisplay = document.getElementById('score-display');
+    scoreDisplay.innerText = `Score: ${correctCount} / ${inputs.length}`;
+    scoreDisplay.style.color = (correctCount === inputs.length) ? '#16a34a' : '#2563eb';
+  }
+</script>
+
+</body>
+</html>
